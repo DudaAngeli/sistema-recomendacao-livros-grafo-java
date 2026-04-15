@@ -1,61 +1,63 @@
-# sistema-recomendacao-livros-grafo-java
-Sistema de recomendação de livros em Java utilizando grafos (HashMap) para representar relações entre obras.
-# 📚 Sistema de Recomendação de Livros com Grafos em Java
+# 📚 Sistema de Recomendação de Livros com Grafos (Java)
 
-Este projeto foi desenvolvido como parte de uma atividade acadêmica com o objetivo de aplicar conceitos de **estruturas de dados**, especialmente **grafos**, utilizando Java.
+Este projeto implementa um sistema de recomendação de livros utilizando **grafos**, uma estrutura de dados amplamente usada para modelar relações complexas.
 
-A aplicação simula um sistema de recomendação de livros, semelhante aos utilizados por plataformas digitais, onde livros são conectados com base em critérios como gênero.
+A aplicação simula o funcionamento básico de sistemas de recomendação utilizados por plataformas digitais, sugerindo livros com base em similaridade.
 
 ---
 
-## 🚀 Tecnologias utilizadas
+## 🧠 Objetivo
 
-* Java
-* Estrutura de dados: `HashMap` e `Set`
+Aplicar conceitos de:
+
+* Estruturas de dados (grafos)
 * Programação orientada a objetos (POO)
+* Algoritmos de recomendação
+* Manipulação de coleções em Java
 
 ---
 
-## 🧠 Conceitos aplicados
+## 🗺️ Modelagem do problema
 
-* Grafos (representação com HashMap)
-* Nós e arestas
-* Relações de similaridade entre objetos
-* Sobrescrita de `equals()` e `hashCode()`
-* Estruturas de coleção (`LinkedList`, `HashSet`)
-
----
-
-## 🗺️ Como o grafo funciona
-
-O grafo é representado da seguinte forma:
+O sistema utiliza um grafo representado por:
 
 ```java
 HashMap<Livro, Set<Livro>>
 ```
 
-* Cada **Livro** é um nó
-* Cada conjunto (`Set<Livro>`) representa as **recomendações (arestas)**
+* 📌 Cada **Livro** é um nó
+* 📌 Cada conjunto de livros representa **arestas (recomendações)**
 
-As conexões são criadas com base em **gênero**, ou seja, livros do mesmo gênero são considerados relacionados.
+As conexões são criadas com base em **similaridade de gênero**.
 
 ---
 
-## 📖 Funcionalidades
+## ⚙️ Funcionalidades
 
 * Listagem de livros disponíveis e emprestados
-* Recomendação de livros baseada em:
+* Recomendação baseada em:
 
-  * 📌 Título
-  * 📌 Gênero
-* Visualização completa das conexões do grafo
+  * 🔎 Título
+  * 🏷️ Gênero
+* Exibição das relações entre livros
 
 ---
 
-## 📂 Estrutura do projeto
+## 💡 Como funciona a recomendação
+
+O sistema percorre o grafo e retorna livros relacionados ao nó escolhido.
+
+Exemplo:
+
+* Se o usuário escolher um livro de **Fantasia**
+* O sistema sugere outros livros do mesmo gênero
+
+---
+
+## 🧱 Estrutura do projeto
 
 ```
-📦 projeto
+📦 src
  ┣ 📂 model
  ┃ ┗ 📜 Livro.java
  ┣ 📂 main
@@ -66,43 +68,30 @@ As conexões são criadas com base em **gênero**, ou seja, livros do mesmo gên
 
 ## ▶️ Como executar
 
-1. Clone o repositório:
-
 ```bash
-git clone https://github.com/seu-usuario/sistema-recomendacao-livros-grafo-java.git
+git clone https://github.com/DudaAngeli/sistema-recomendacao-livros-grafo-java.git
 ```
 
-2. Abra o projeto em uma IDE (IntelliJ, Eclipse ou VS Code)
-
-3. Execute a classe `Main.java`
-
----
-
-## 💡 Exemplo de uso
-
-O usuário pode:
-
-* Ver todos os livros cadastrados
-* Buscar recomendações por gênero (ex: Fantasia, Romance)
-* Buscar recomendações a partir de um livro específico
+* Abra em uma IDE (IntelliJ, Eclipse ou VS Code)
+* Execute `Main.java`
 
 ---
 
-## 📌 Melhorias futuras
+## 🚀 Possíveis melhorias
 
-* Implementar algoritmos de busca em grafos (BFS/DFS)
-* Adicionar pesos às conexões (nível de similaridade)
+* Implementar BFS/DFS para navegação no grafo
+* Adicionar pesos às recomendações
 * Criar interface gráfica
-* Persistência de dados (banco de dados)
+* Persistência em banco de dados
 
 ---
 
 ## 👩‍💻 Autora
 
-Desenvolvido por **Eduarda Angeli**
+Eduarda Angeli
 
 ---
 
-## 📄 Licença
+## 📌 Sobre o projeto
 
-Este projeto é apenas para fins educacionais.
+Este projeto foi desenvolvido com fins educacionais, mas estruturado para demonstrar habilidades práticas em desenvolvimento back-end e estruturas de dados.
